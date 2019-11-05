@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.sun.woodstock</groupId>
+    <artifactId>webui-jsf</artifactId>
+    <version>4.0.2.10.payara-p17-SNAPSHOT</version>
+
+    <properties>
+        <encoding>UTF-8</encoding>
+        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+        <maven.compiler.encoding>${encoding}</maven.compiler.encoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.optimize>true</maven.compiler.optimize>
+        <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+        <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Implementation-Title>Woodstock 4.0-201604051537-dev</Implementation-Title>
+                            <Implementation-Version>4.0-201604051537-dev</Implementation-Version>
+                            <Implementation-Vendor>Sun Microsystems Inc.</Implementation-Vendor>
+                            <Implementation-Vendor-Id>com.sun</Implementation-Vendor-Id>
+                            <Specification-Title>Woodstock</Specification-Title>
+                            <Specification-Version>4.0-dev</Specification-Version>
+                            <Specification-Vendor>Sun Microsystems Inc.</Specification-Vendor>
+                        </manifestEntries>
+                        <manifestSections>
+                            <manifestSection>
+                                <name>com/sun/webui/jsf/</name>
+                                <manifestEntries>
+                                    <X-SJWUIC-SWAED-Version>4.0</X-SJWUIC-SWAED-Version>
+                                    <X-SJWUIC-Components-Version>4.0</X-SJWUIC-Components-Version>
+                                    <X-SJWUIC-Components-Timestamp>201604051537</X-SJWUIC-Components-Timestamp>
+                                    <X-SJWUIC-Theme-Version-Required>4.0</X-SJWUIC-Theme-Version-Required>
+                                </manifestEntries>
+                            </manifestSection>
+                        </manifestSections>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.help</groupId>
+            <artifactId>javahelp</artifactId>
+            <version>2.0.05</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.woodstock.dependlibs</groupId>
+            <artifactId>dataprovider</artifactId>
+            <version>1.0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.woodstock.dependlibs</groupId>
+            <artifactId>json</artifactId>
+            <version>1.0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.faces.extensions</groupId>
+            <artifactId>jsf-extensions-dev-time-annotations</artifactId>
+            <version>0.2</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.faces.extensions</groupId>
+            <artifactId>jsf-extensions-dynamic-faces</artifactId>
+            <version>0.2</version>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>8.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
+
